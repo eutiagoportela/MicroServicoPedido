@@ -8,9 +8,9 @@ Caixas Disponíveis:
 
 As caixas pré-fabricadas (altura, largura, comprimento):
 
-Caixa 1: 30 x 40 x 80
-Caixa 2: 80 x 50 x 40
-Caixa 3: 50 x 80 x 60
+Caixa 1: 30 x 40 x 80<br/>
+Caixa 2: 80 x 50 x 40<br/>
+Caixa 3: 50 x 80 x 60<br/>
 
 Entrada de exemplo do endpoint: <br/>
 ```json
