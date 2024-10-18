@@ -1,0 +1,14 @@
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: MicroServicoPedido.API/Dockerfile               
+    ports:
+      - "8080:80"                         
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production  
+      - JWT_KEY=2W3Jj4Gd5Lk7Rr8S6t9Zb1XqCk8Yv3F5Zc9J8Rk1Q0N=
+      - JWT_ISSUER=MicroServicoPedidoAPI    
+      - JWT_AUDIENCE=MicroServicoPedidoClient 
+    restart: always 
