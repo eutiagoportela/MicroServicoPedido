@@ -2,11 +2,9 @@
 
 Este repositório faz o seguinte processo: 
 
-A API recebe uma lista de pedidos. Cada pedido contém uma lista de produtos, cada um com suas dimensões (altura, largura, comprimento). A API processa cada pedido e determinar a melhor forma de embalar os produtos, selecionando uma ou mais caixas para cada pedido e especificando quais produtos vão em cada caixa.
+A API recebe uma lista de pedidos. Cada pedido contém uma lista de produtos, cada um com suas dimensões (altura, largura, comprimento). A API processa cada pedido e determinar a melhor forma de embalar os produtos, selecionando uma ou mais caixas para cada pedido e especificando quais produtos vão em cada caixa.<br/>
 
-Caixas Disponíveis:
-
-As caixas pré-fabricadas (altura, largura, comprimento):
+As caixas disponíveis pré-fabricadas (altura, largura, comprimento):
 
 Caixa 1: 30 x 40 x 80<br/>
 Caixa 2: 80 x 50 x 40<br/>
