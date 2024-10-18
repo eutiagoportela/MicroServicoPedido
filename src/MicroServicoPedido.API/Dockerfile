@@ -5,6 +5,9 @@ WORKDIR /app
 # Copia todos os arquivos do diretório src (sem o src na frente)
 COPY . .
 
+# Listar arquivos após a cópia
+RUN ls -al /app
+
 # Configura o diretório de trabalho para o projeto da API
 WORKDIR /app/MicroServicoPedido.API
 

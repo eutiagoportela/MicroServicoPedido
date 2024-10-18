@@ -7,23 +7,25 @@ using AutoMapper;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Configuração do Serilog
+
 Log.Logger = new LoggerConfiguration()
     .MinimumLevel.Debug()
     .WriteTo.Console()
     .WriteTo.File("logs/log-.txt", rollingInterval: RollingInterval.Day)
     .CreateLogger();
 
-// Adicionar suporte a variáveis de ambiente para produção via Docker
 builder.Configuration.AddEnvironmentVariables();
 
 builder.Services.AddAutoMapper(typeof(AutoMapping));
 builder.Services.AddJwtAuthentication(builder.Configuration);
 builder.Services.AddApplication();
 builder.Services.AddControllers();
+
+builder.Services.AddHealthChecks();
+
 builder.Logging.AddConsole();
 
-// Configuração do Swagger/OpenAPI
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(config =>
 {
@@ -57,9 +59,8 @@ builder.Services.AddSwaggerGen(config =>
 
 var app = builder.Build();
 
-// Verificação da configuração do AutoMapper
 var mapperConfig = new MapperConfiguration(cfg => cfg.AddProfile<AutoMapping>());
-mapperConfig.AssertConfigurationIsValid(); // Valida a configuração do AutoMapper
+mapperConfig.AssertConfigurationIsValid(); 
 
 if (app.Environment.IsDevelopment())
 {
@@ -72,5 +73,8 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
+
+
+app.MapHealthChecks("/health");  // <-- Endpoint de health check
 
 app.Run();
