@@ -12,8 +12,8 @@ Caixa 1: 30 x 40 x 80
 Caixa 2: 80 x 50 x 40
 Caixa 3: 50 x 80 x 60
 
-Entrada e saída do endpoint:
-Entrada de exemplo do endpoint: 
+Entrada de exemplo do endpoint: <br/>
+```json
 {
   "pedidos": [
     {
@@ -31,8 +31,11 @@ Entrada de exemplo do endpoint:
     }
   ]
 }
+```
+<br/>
 
-Exemplo de saida do endpoint com a entrada:
+Exemplo de saida do endpoint com a entrada:<br/>
+```json
 {
   "pedidos": [
     {
@@ -49,7 +52,7 @@ Exemplo de saida do endpoint com a entrada:
     }
   ]
 }
-
+```
 ###Passos para Instalação via Docker
 Após clonar o projeto, navegue até a pasta src do projeto usando o prompt de comando ou o PowerShell. Por exemplo: cd H:\TESTE\FINAL\MicroServicoPedido\src<br/>
 Abra o Docker Desktop e execute o seguinte comando: docker-compose -f src\docker-compose.yml up --build<br/>
