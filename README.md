@@ -54,10 +54,10 @@ Exemplo de saida do endpoint com a entrada:<br/>
 }
 ```
 ##Passos para Instalação via Docker:<br/>
-Após clonar o projeto, navegue até a pasta src do projeto usando o prompt de comando ou o PowerShell. Por exemplo: cd H:\TESTE\FINAL\MicroServicoPedido\src<br/>
-Abra o Docker Desktop e execute o seguinte comando: docker-compose -f src\docker-compose.yml up --build<br/>
+Após clonar o projeto, navegue até a pasta src do projeto usando o prompt de comando ou o PowerShell. <br/>Por exemplo: cd H:\TESTE\FINAL\MicroServicoPedido\src<br/>
+Abra o Docker Desktop e execute o seguinte comando: docker-compose -f src\docker-compose.yml up --build<br/><br/>
 Após criar o container, siga estes passos para utilização:<br/>
-  http://localhost:8080/health para testar com resposta "Healthy"<br/>
-  http://localhost:8080/api/usuarios/register e o JSON por exemplo: { "NomeUsuario": "usuario1","Senha": "senha123"} para registrar um usuário<br/>
-  http://localhost:8080/api/auth/login e o JSON por exemplo: {"usuarioNome": "usuario1","senha": "senha123"} para obter o Token de acesso<br/>
-  http://localhost:8080/api/pedidos/calcular com o uso do Token e o JSON de entrada fornecido anteriormente, para obter o resultado esperado.<br/>
+  1- http://localhost:8080/health para testar com resposta "Healthy"<br/>
+  2- http://localhost:8080/api/usuarios/register e o JSON por exemplo: { "NomeUsuario": "usuario1","Senha": "senha123"} para registrar um usuário<br/>
+  3- http://localhost:8080/api/auth/login e o JSON por exemplo: {"usuarioNome": "usuario1","senha": "senha123"} para obter o Token de acesso<br/>
+  4- http://localhost:8080/api/pedidos/calcular com o uso do Token e o JSON de entrada fornecido anteriormente, para obter o resultado esperado.<br/>
