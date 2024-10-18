@@ -53,7 +53,7 @@ Exemplo de saida do endpoint com a entrada:<br/>
   ]
 }
 ```
-###Passos para Instalação via Docker
+##Passos para Instalação via Docker:<br/>
 Após clonar o projeto, navegue até a pasta src do projeto usando o prompt de comando ou o PowerShell. Por exemplo: cd H:\TESTE\FINAL\MicroServicoPedido\src<br/>
 Abra o Docker Desktop e execute o seguinte comando: docker-compose -f src\docker-compose.yml up --build<br/>
 Após criar o container, siga estes passos para utilização:<br/>
